@@ -1,0 +1,120 @@
+{
+    "actorSpecification": 1,
+    "fields": {
+        "type": "object",
+        "properties": {
+            "type": {
+                "type": "string",
+                "title": "Entity Type"
+            },
+            "url": {
+                "type": "string",
+                "title": "X URL"
+            },
+            "id": {
+                "type": "string",
+                "title": "Tweet / User ID"
+            },
+            "username": {
+                "type": "string",
+                "title": "Username (@handle)"
+            },
+            "name": {
+                "type": "string",
+                "title": "Display Name"
+            },
+            "followersCount": {
+                "type": "integer",
+                "title": "Followers Count"
+            },
+            "followingCount": {
+                "type": "integer",
+                "title": "Following Count"
+            },
+            "tweetsCount": {
+                "type": "integer",
+                "title": "Total Tweets Count"
+            },
+            "biography": {
+                "type": "string",
+                "title": "Biography"
+            },
+            "email": {
+                "type": "string",
+                "title": "Contact Email"
+            },
+            "phone": {
+                "type": "string",
+                "title": "Contact Phone"
+            },
+            "website": {
+                "type": "string",
+                "title": "Bio Website"
+            },
+            "location": {
+                "type": "string",
+                "title": "Location"
+            },
+            "isVerified": {
+                "type": "boolean",
+                "title": "Verified Status"
+            },
+            "joinedDate": {
+                "type": "string",
+                "title": "Joined Date"
+            },
+            "text": {
+                "type": "string",
+                "title": "Tweet Text"
+            },
+            "likesCount": {
+                "type": "integer",
+                "title": "Likes Count"
+            },
+            "retweetsCount": {
+                "type": "integer",
+                "title": "Retweets Count"
+            },
+            "repliesCount": {
+                "type": "integer",
+                "title": "Replies Count"
+            },
+            "quotesCount": {
+                "type": "integer",
+                "title": "Quotes Count"
+            },
+            "viewsCount": {
+                "type": "integer",
+                "title": "Views / Impressions"
+            },
+            "bookmarksCount": {
+                "type": "integer",
+                "title": "Bookmarks Count"
+            },
+            "mediaUrls": {
+                "type": "array",
+                "title": "Photos & Media URLs"
+            },
+            "videoUrls": {
+                "type": "array",
+                "title": "Direct MP4 Video URLs"
+            },
+            "hashtags": {
+                "type": "array",
+                "title": "Hashtags"
+            },
+            "mentions": {
+                "type": "array",
+                "title": "Mentions"
+            },
+            "timestamp": {
+                "type": "string",
+                "title": "Publication Timestamp"
+            },
+            "scrapedAt": {
+                "type": "string",
+                "title": "Scraped At"
+            }
+        }
+    }
+}
