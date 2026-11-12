@@ -1,7 +1,9 @@
 {
     "actorSpecification": 1,
     "fields": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
         "type": "object",
+        "additionalProperties": true,
         "properties": {
             "type": {
                 "type": "string",
@@ -63,6 +65,22 @@
                 "type": "string",
                 "title": "Joined Date"
             },
+            "avatarUrl": {
+                "type": "string",
+                "title": "Avatar Image URL"
+            },
+            "bannerUrl": {
+                "type": "string",
+                "title": "Banner Image URL"
+            },
+            "recentTweets": {
+                "type": "array",
+                "title": "Recent Profile Tweets",
+                "items": {
+                    "type": "object",
+                    "additionalProperties": true
+                }
+            },
             "text": {
                 "type": "string",
                 "title": "Tweet Text"
@@ -91,21 +109,45 @@
                 "type": "integer",
                 "title": "Bookmarks Count"
             },
+            "isVideo": {
+                "type": "boolean",
+                "title": "Has Video"
+            },
             "mediaUrls": {
                 "type": "array",
-                "title": "Photos & Media URLs"
+                "title": "Photos & Media URLs",
+                "items": {
+                    "type": "string"
+                }
             },
             "videoUrls": {
                 "type": "array",
-                "title": "Direct MP4 Video URLs"
+                "title": "Direct MP4 Video URLs",
+                "items": {
+                    "type": "string"
+                }
             },
             "hashtags": {
                 "type": "array",
-                "title": "Hashtags"
+                "title": "Hashtags",
+                "items": {
+                    "type": "string"
+                }
             },
             "mentions": {
                 "type": "array",
-                "title": "Mentions"
+                "title": "Mentions",
+                "items": {
+                    "type": "string"
+                }
+            },
+            "sourceUrl": {
+                "type": "string",
+                "title": "Source Target URL"
+            },
+            "searchQuery": {
+                "type": "string",
+                "title": "Search Query"
             },
             "timestamp": {
                 "type": "string",
@@ -114,6 +156,70 @@
             "scrapedAt": {
                 "type": "string",
                 "title": "Scraped At"
+            }
+        }
+    },
+    "views": {
+        "overview": {
+            "title": "Overview",
+            "transformation": {
+                "fields": [
+                    "type",
+                    "username",
+                    "name",
+                    "followersCount",
+                    "text",
+                    "likesCount",
+                    "retweetsCount",
+                    "viewsCount",
+                    "email",
+                    "url"
+                ]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "type": {
+                        "label": "Type",
+                        "format": "text"
+                    },
+                    "username": {
+                        "label": "Handle",
+                        "format": "text"
+                    },
+                    "name": {
+                        "label": "Name",
+                        "format": "text"
+                    },
+                    "followersCount": {
+                        "label": "Followers",
+                        "format": "number"
+                    },
+                    "text": {
+                        "label": "Tweet",
+                        "format": "text"
+                    },
+                    "likesCount": {
+                        "label": "Likes",
+                        "format": "number"
+                    },
+                    "retweetsCount": {
+                        "label": "Retweets",
+                        "format": "number"
+                    },
+                    "viewsCount": {
+                        "label": "Views",
+                        "format": "number"
+                    },
+                    "email": {
+                        "label": "Email",
+                        "format": "text"
+                    },
+                    "url": {
+                        "label": "URL",
+                        "format": "link"
+                    }
+                }
             }
         }
     }
