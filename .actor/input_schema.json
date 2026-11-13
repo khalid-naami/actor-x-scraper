@@ -30,8 +30,12 @@
             "description": "User profiles, tweet links, or handles (e.g. https://x.com/elonmusk, @OpenAI, or https://x.com/elonmusk/status/...).",
             "editor": "requestListSources",
             "prefill": [
-                { "url": "https://x.com/elonmusk" },
-                { "url": "https://x.com/OpenAI" }
+                {
+                    "url": "https://x.com/elonmusk"
+                },
+                {
+                    "url": "https://x.com/OpenAI"
+                }
             ]
         },
         "searchQueries": {
@@ -70,15 +74,20 @@
             "editor": "proxy",
             "default": {
                 "useApifyProxy": true,
-                "apifyProxyGroups": ["RESIDENTIAL"]
+                "apifyProxyGroups": [
+                    "RESIDENTIAL"
+                ]
             }
         },
         "customCookies": {
             "title": "X / Twitter Session Cookies (Optional)",
             "type": "string",
             "description": "Optional X cookies (JSON array or 'auth_token=...; ct0=...' format) for scraping protected tweets, full follower lists, or running in authenticated mode.",
-            "editor": "textarea"
+            "editor": "textfield",
+            "isSecret": true
         }
     },
-    "required": ["targetUrls"]
+    "required": [
+        "targetUrls"
+    ]
 }
