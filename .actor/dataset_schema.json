@@ -149,6 +149,14 @@
                 "type": "string",
                 "title": "Search Query"
             },
+            "trendRank": {
+                "type": "integer",
+                "title": "Trend Rank"
+            },
+            "title": {
+                "type": "string",
+                "title": "Trend / Topic Title"
+            },
             "timestamp": {
                 "type": "string",
                 "title": "Publication Timestamp"
@@ -157,7 +165,8 @@
                 "type": "string",
                 "title": "Scraped At"
             }
-        }
+        },
+        "required": []
     },
     "views": {
         "overview": {
